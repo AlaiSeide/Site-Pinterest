@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+
+    {% include 'navbar.html' %}
+
+    <h1>Feed Principal</h1>
+
+    {% for foto in fotos %}
+        <!-- foto.imagem é a instancia da minha classe Foto pegando a foto em si -->
+        <!-- No html so o .format() é que funciona -->
+        <a href="{{ url_for('perfil', id_usuario=foto.id_usuario) }}">
+            <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" alt="Imagem Padrao do Usuario" width="200">
+        </a>
+
+     {% endfor %}
+
+{% endblock %}

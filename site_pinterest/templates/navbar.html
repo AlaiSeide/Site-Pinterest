@@ -1,0 +1,10 @@
+<nav>
+    <a href="{{ url_for('feed') }}">Feed</a>
+
+    <a href="{{ url_for('perfil', id_usuario=current_user.id) }}">Perfil</a>
+
+    
+     <!-- homepage é a minha funcao home-->
+     <a href="{{ url_for('logout') }}">Sair</a>
+
+</nav>
