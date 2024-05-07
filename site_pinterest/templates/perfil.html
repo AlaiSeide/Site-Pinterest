@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Perfil - {{ usuario }}
+{% endblock %}
+
+
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+
+    <h1>Perfil do usuario: {{ usuario }} </h1>
+
+     <!-- homepage é a minha funcao home-->
+     <a href="{{ url_for('homepage') }}">Sair</a>
+     
+{% endblock %}
