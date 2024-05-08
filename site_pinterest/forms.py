@@ -16,7 +16,7 @@ class FormLogin(FlaskForm):
         # buscar um usuario pelo email
         usuario = Usuario.query.filter_by(email=email.data).first()
         if not usuario:
-            raise ValidationError('Usuario nao existe, Crie Conta')
+            raise ValidationError('User does not exist, Create Account')
 
 class FormCriarConta(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
@@ -31,7 +31,7 @@ class FormCriarConta(FlaskForm):
         # buscar um usuario pelo email
         usuario = Usuario.query.filter_by(email=email.data).first()
         if usuario:
-            raise ValidationError('E-mail já cadastrado, faca login para continuar')
+            raise ValidationError('E-mail already registered, login to continue')
 
 
 class FormFoto(FlaskForm):

@@ -15,7 +15,7 @@
 
 {% macro error(campo) %}
         {% if campo.errors %}
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" style="color: red;">
                 {% for error in campo.errors %}
                     {{ error }}
                 {% endfor %}
