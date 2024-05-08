@@ -36,22 +36,26 @@
 
         <div class="div-input">
             {{ form.email.label(class="label") }}
-            {{ form.email(class="input") }}
+            {{ form.email(class="input is-invalid") }}
+            {{ error(form.email) }}
         </div>
 
         <div class="div-input">
             {{ form.username.label(class="label") }}
-            {{ form.username(class="input") }}
+            {{ form.username(class="input is-invalid") }}
+            {{ error(form.username) }}
         </div>
 
         <div class="div-input">
             {{ form.senha.label(class="label") }}
-            {{ form.senha(class="input") }}
+            {{ form.senha(class="input is-invalid") }}
+            {{ error(form.senha) }}
         </div>
 
         <div class="div-input">
             {{ form.confirmacao_senha.label(class="label") }}
-            {{ form.confirmacao_senha(class="input") }}
+            {{ form.confirmacao_senha(class="input is-invalid") }}
+            {{ error(form.confirmacao_senha) }}
         </div>
 
         <div class="div-botao">

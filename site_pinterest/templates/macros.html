@@ -1,0 +1,24 @@
+<!-- {% macro render_field(field) %}
+    <div class="div-input">
+        {{ field.label(class="label") }}
+        {% if field.errors %}
+            <div class="error-message invalid-feedback">
+                {% for error in field.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ field(class="input is-invalid") }}
+    </div>
+{% endmacro %} -->
+
+
+{% macro error(campo) %}
+        {% if campo.errors %}
+            <div class="invalid-feedback">
+                {% for error in campo.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+{% endmacro %}

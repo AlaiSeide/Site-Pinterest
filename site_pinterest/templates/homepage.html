@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+<!-- {% from 'macros.html' import render_field %} -->
+
+{% from 'macros.html' import error %}
+
+
 
 {% block titulo %}
     FakePinterest
@@ -47,6 +52,7 @@
             <div class="container-popup">
 
                 {% block formulario %}
+                <!--Formulario de Login-->
                     <form action="" method="POST" class="popup">
                         {{ form.csrf_token }}
 
@@ -67,20 +73,26 @@
 
                         <h2>Bem-vindo(a) ao FakePinterest</h2>
 
+                        <!--Campo de Email-->
                         <div class="div-input">
                             {{ form.email.label(class="label") }}
-                            {{ form.email(class="input") }}
+                            {{ form.email(class="input is-invalid") }}
+                            {{ error(form.email) }}
                         </div>
 
+                        <!--Campo de Senha-->
                         <div class="div-input">
                             {{ form.senha.label(class="label") }}
-                            {{ form.senha(class="input") }}
+                            {{ form.senha(class="input is-invalid") }}
+                            {{ error(form.senha) }}
                         </div>
 
+                        <!--Botao de Login-->
                         <div class="div-botao">
                             {{ form.botao_login(class="botao-login") }}
                         </div>
 
+                        <!--Link de redirecionar para a pagina de Criar Conta-->
                         <a class="link-criarconta" href="{{ url_for('criarconta') }}">Não tem uma conta? Crie aqui</a>
                             
                     </form>

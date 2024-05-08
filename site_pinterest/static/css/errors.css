@@ -1,0 +1,10 @@
+
+.error-message {
+    color: #a94442; /* Cor do texto */
+    background-color: #f2dede; /* Cor de fundo */
+    border-color: #ebccd1; /* Cor da borda */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior */
+    border: 1px solid transparent; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+}
