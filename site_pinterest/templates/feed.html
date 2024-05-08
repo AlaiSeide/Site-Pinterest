@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 
 
-
 {% block body %}
-
     {% include 'navbar.html' %}
+    <body>
 
-    <h1>Feed Principal</h1>
+        <div class="container">
 
-    {% for foto in fotos %}
-        <!-- foto.imagem é a instancia da minha classe Foto pegando a foto em si -->
-        <!-- No html so o .format() é que funciona -->
-        <a href="{{ url_for('perfil', id_usuario=foto.id_usuario) }}">
-            <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" alt="Imagem Padrao do Usuario" width="200">
-        </a>
+            <div class="conteudo">
+                {% for foto in fotos %}
+                    <!-- foto.imagem é a instancia da minha classe Foto pegando a foto em si -->
+                    <!-- No html so o .format() é que funciona -->
+                    <a  href="{{ url_for('perfil', id_usuario=foto.id_usuario) }}" class="bloco-imagem">
+                        <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" />
+                    </a>
+                {% endfor %}
+            </div>
 
-     {% endfor %}
+        </div>
 
+    </body>
 {% endblock %}
