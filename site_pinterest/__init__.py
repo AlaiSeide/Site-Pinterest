@@ -18,7 +18,7 @@ database = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 
-# quando o usuario tentar acessar uma pagina sem fazer login, seria redirecionado para a pagina de login que é 'homepage'
+# quando o usuario tentar acessar uma pagina sem fazer login, seri redirecionado para a pagina de login que é 'homepage'
 login_manager.login_view = 'homepage'
 
 

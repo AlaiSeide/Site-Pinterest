@@ -63,7 +63,6 @@ def perfil(id_usuario):  # Define uma função chamada 'perfil' que recebe um pa
 @app.route('/sair')
 @login_required
 def logout():
-
     logout_user()
     return redirect(url_for('homepage'))
 
